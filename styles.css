@@ -1,4 +1,3 @@
-
 :root {
     --couleur-principale: #ff4d4d;
     --couleur-secondaire: #333;
@@ -6,12 +5,10 @@
     --couleur-texte: #666;
 }
 
-
 body {
     margin: 0;
     font-family: Arial, sans-serif;
 }
-
 
 .navigation {
     position: fixed;
@@ -21,25 +18,20 @@ body {
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-
 .contenu-accueil {
     text-align: center;
     padding: 150px 20px;
 }
 
-
-.bouton-commander{
+.bouton-commander {
     align-self: center;
     position: relative;
     top: 30px;
-   
-   
 }
 
 #accueil {
     height: 70vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-                url('images/hero-pizza..png') no-repeat center center;
+    background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url('images/hero-pizza..png') no-repeat center center;
     background-size: cover;
     display: flex;
     align-items: center;
@@ -48,19 +40,19 @@ body {
     color: white;
 }
 
-
-/
 .grille-pizzas {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: 30px;
     padding: 20px;
 }
+
 .carte-pizza {
     background: white;
     border-radius: 15px;
     overflow: hidden;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
 }
 
 .bouton-commander {
@@ -70,7 +62,6 @@ body {
     border-radius: 25px;
     text-decoration: none;
 }
-
 
 .section-panier {
     padding: 120px 5% 80px;
@@ -88,7 +79,7 @@ body {
 .bouton-voir {
     display: block;
     margin: 20px auto;
-       padding: 10px 20px;
+    padding: 10px 20px;
     background-color: var(--couleur-principale);
     color: #fff;
     border: none;
@@ -104,8 +95,6 @@ body {
     background-color: #ff3333;
 }
 
-
-/* Responsive */
 @media (max-width: 768px) {
     .grille-pizzas {
         grid-template-columns: 1fr;
@@ -126,8 +115,8 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: rgba(255, 255, 255, 0.95);
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    background: rgba(255,255,255,0.95);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     z-index: 1000;
 }
 
@@ -163,8 +152,7 @@ nav a:hover {
 
 #hero {
     height: 70vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-                url('images/hero-pizza..png');
+    background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url('images/hero-pizza..png');
     background-size: cover;
     background-position: center;
     display: flex;
@@ -213,7 +201,7 @@ nav a:hover {
 
 .grid-pizzas {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: 30px;
     padding: 0 20px;
 }
@@ -222,7 +210,7 @@ nav a:hover {
     background: white;
     border-radius: 15px;
     overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
     transition: transform 0.3s;
 }
 
@@ -232,7 +220,7 @@ nav a:hover {
 
 .carte-pizza img {
     width: 100%;
-    height: 200px;
+    height: 150px;
     object-fit: cover;
 }
 
@@ -275,15 +263,12 @@ nav a:hover {
     nav {
         padding: 15px 20px;
     }
-    
     nav ul {
         gap: 15px;
     }
-    
     .hero-content h1 {
         font-size: 2.5rem;
     }
-    
     .grid-pizzas {
         grid-template-columns: 1fr;
     }
@@ -306,7 +291,7 @@ nav a:hover {
     background: white;
     border-radius: 15px;
     padding: 30px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
 .carte-contact h3 {
@@ -351,19 +336,63 @@ nav a:hover {
 }
 
 .pizza-panier img {
-    width: 140px;       
-    height: 130px;      
-    object-fit: cover;  
+    width: 140px;
+    height: 130px;
+    object-fit: cover;
     border-radius: 10px;
 }
-
 
 @media (max-width: 768px) {
     .grid-contact {
         grid-template-columns: 1fr;
     }
-    
     .carte-contact {
         padding: 20px;
     }
+}
+
+.confirmation {
+    padding: 120px 5% 80px;
+    background: #f9f9f9;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.confirmation-container {
+    max-width: 600px;
+    width: 100%;
+    background: white;
+    border-radius: 15px;
+    padding: 40px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.confirmation-container h1 {
+    color: #28a745;
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+}
+
+.confirmation-container p {
+    color: #666;
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.confirmation-container .btn-commander {
+    display: inline-block;
+    padding: 15px 30px;
+    background: #ff4d4d;
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.confirmation-container .btn-commander:hover {
+    background: #ff3333;
 }
