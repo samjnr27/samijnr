@@ -50,16 +50,31 @@
 
             <div class="carte-contact">
                 <h3>Envoyez-nous un message</h3>
-                <form class="contact-form" >
+                <form class="contact-form" id="contactForm">
                     <input type="text" name="nom" placeholder="Votre nom" required>
                     <input type="email" name="email" placeholder="Votre email" required>
                     <input type="tel" name="telephone" placeholder="Votre téléphone">
                     <textarea name="message" placeholder="Votre message" required></textarea>
-                    <a href="env_mail.html" button  type="submit" class="btn-commander">Envoyer</button>
-              </form>
+                    <button type="button" class="btn-commander" onclick="verifierEtRediriger()">
+                         Envoyer
+                    </button>
+                </form>
+            </div>
+            <script>
+                function verifierEtRediriger() {
+                    let form = document.getElementById("contactForm");
+                    if (form.checkValidity()) {
+                        window.location.href = 'env_mail.html';
+                } else {
+                        form.reportValidity();
+                    }
+                }
+            </script>
+            
             </div>
         </div>
     </section>
+    
 </body>
 </html>
 
