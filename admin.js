@@ -1,4 +1,4 @@
-// Identifiants administrateur
+// Identifiant administrateur
 const IDENTIFIANT_ADMIN = "admin";
 const MOTDEPASSE_ADMIN = "admin123";
 
@@ -16,7 +16,7 @@ function connexionAdmin(evenement) {
     }
 }
 
-// Vérifier si l'admin est connecté
+// Vérifier si admin est connecté
 function verifierAdmin() {
     if (!localStorage.getItem('adminConnecte') && !window.location.href.includes('admin-login.html')) {
         window.location.href = 'admin-login.html';
@@ -79,12 +79,13 @@ function supprimerCommande(numeroCommande) {
     }
 }
 
-// Initialisation
+
 if (document.querySelector('.admin-dashboard')) {
     verifierAdmin();
     afficherCommandes();
 } 
 
+// Afficher Commande
 function afficherCommandes() {
     const listeCommandes = JSON.parse(localStorage.getItem('commandes')) || [];
     const conteneurCommandes = document.getElementById('liste-commandes');
@@ -109,7 +110,7 @@ function afficherCommandes() {
             </div>
             <div class="actions-commande">
                 <button onclick="validerCommande(${index})" class="bouton-valider">Valider</button>
-                <button onclick="supprimerCommande(${index})" class="bouton-supprimer">Supprimer</button>
+                 <button onclick="supprimerCommande(${index})" class="bouton-supprimer">Supprimer</button>
             </div>
         </div>
     `).join('');
