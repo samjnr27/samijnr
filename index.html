@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Pizza - Les Meilleures Pizzas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">Home Pizza</div>
+        <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="panier.html" class="panier">Panier (<span id="nombre-panier">0</span>)</a></li>
+        </ul>
+    </nav>
+
+    <section id="accueil">
+        <div class="contenu-accueil">
+            <h1>Des Pizzas Authentiques</h1>
+            <p>Faites avec amour, cuites au feu de bois</p>
+            <a href="#menu" class="bouton-commander">Voir le Menu</a>
+        </div>
+    </section>
+
+    <section id="menu">
+        <h2>Nos Pizzas</h2>
+        <div class="grille-pizzas">
+            <!-- Pizza 1 -->
+            <a href="produit1.html" style="text-decoration:none" class="carte-pizza">
+                <img src="pizza-margherita.jpg" alt="Pizza Margherita">
+                <h3>Margherita</h3>
+                <p>Tomate, Mozzarella, Basilic frais</p>
+                <span class="prix">12.90€</span>
+                <button class="bouton-voir">Voir le produit</button>
+            </a>
+
+            <!-- Pizza 2 -->
+            <a href="produit2.html" style="text-decoration:none" class="carte-pizza">
+                <img src="pizza-regina-123rf.jpg" alt="Pizza Regina">
+                <h3>Regina</h3>
+                <p>Tomate, Mozzarella, Jambon, Champignons</p>
+                <span class="prix">14.90€</span>
+                <button class="bouton-voir">Voir le produit</button>
+            </a>
+
+            <!-- Pizza 3 -->
+            <a href="produit3.html" style="text-decoration:none" class="carte-pizza">
+                <img src="pizza-4fromge.jpg" alt="Pizza 4 Fromages">
+                <h3>3 Fromages</h3>
+                <p>Crème, Mozzarella, Gorgonzola, Chèvre</p>
+                <span class="prix">15.90€</span>
+                <button class="bouton-voir">Voir le produit</button>
+            </a>
+        </div>
+    </section>
+</body>
+</html>

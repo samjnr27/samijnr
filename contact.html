@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PizzaDélice - Contact</title>
+    <link rel="stylesheet" href="jnr.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">Home Pizza</div>
+        <ul>
+            <li><a href="index.html">Accueil</a></li>
+             <li><a href="index.html#menu">Menu</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="panier.html" class="panier">Panier (0)</a></li>
+        </ul>
+    </nav>
+
+    <section id="hero">
+        <div class="hero-content">
+          <h1>Contactez-nous</h1>
+            <p>Nous sommes à votre écoute</p>
+        </div>
+    </section>
+
+<section id="contact">
+        <div class="grid-contact">
+        <div class="carte-contact">
+                <h3>Nos Coordonnées</h3>
+            <div class="info-block">
+                <h4>Adresse</h4>
+                <p>86 allée des lias</p>
+                 <p>77410 Paris, France</p>
+                </div>
+                <div class="info-block">
+                    <h4>Téléphone</h4>
+                    <p>07 71 27 95 25</p>
+                </div>
+                <div class="info-block">
+                    <h4>Email</h4>
+                    <p>sami.menekbi02@gmail.com</p>
+                </div>
+                <div class="info-block">
+                    <h4>Horaires</h4>
+                    <p>Lundi - Vendredi: 11h00 - 22h00</p>
+                    <p>Samedi - Dimanche: 11h00 - 23h00</p>
+                </div>
+            </div>
+
+            <div class="carte-contact">
+                <h3>Envoyez-nous un message</h3>
+                <form class="contact-form" action="env_mail.php" method="POST">
+                    <input type="text" name="nom" placeholder="Votre nom" required>
+                    <input type="email" name="email" placeholder="Votre email" required>
+                    <input type="tel" name="telephone" placeholder="Votre téléphone">
+                    <textarea name="message" placeholder="Votre message" required></textarea>
+                    <button type="submit" class="btn-commander">Envoyer</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    
+</body>
+</html>
+

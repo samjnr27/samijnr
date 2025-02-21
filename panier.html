@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panier - Home Pizza</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">Home Pizza</div>
+        <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="index.html#menu">Menu</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="panier.html" class="panier">Panier (<span id="panier-count">0</span>)</a></li>
+        </ul>
+    </nav>
+
+    <section class="section-panier">
+        <div class="conteneur-panier">
+            <h1>Votre Panier</h1>
+            <div id="liste-panier">
+                <!-- ajout dinamique -->
+            </div>
+            <div id="message-vide" class="panier-vide">
+                Votre panier est vide
+            </div>
+            <div id="total-panier" class="total-panier">
+                <h3>Total : <span id="prix-total">0.00</span>€</h3>
+                <button id="commander" class="bouton-commander">Commander</button>
+            </div>
+        </div>
+    </section>
+
+    <script src="panier.js"></script>
+</body>
+</html>

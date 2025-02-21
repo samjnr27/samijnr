@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza Regina - Home Pizza</title>
+    <link rel="stylesheet" href="jnr.css">
+    <script src="panier.js"></script>
+</head>
+<body>
+    <nav>
+        <div class="logo">Home Pizza</div>
+        <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="index.html#menu">Menu</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="panier.html" class="panier">Panier </a></li>
+        </ul>
+    </nav>
+
+    <section class="produit-details">
+        <div class="produit-container">
+            <div class="produit-image">
+                <img src="pizza-regina-123rf.jpg" alt="Pizza Regina">
+            </div>
+            <div class="produit-info">
+                <h1>Pizza Regina</h1>
+                <p class="description">La Regina est une pizza gourmande qui associe le jambon et les champignons frais sur une base de sauce tomate et de mozzarella fondante.</p>
+                <div class="ingredients">
+                    <h3>Ingrédients :</h3>
+                    <ul>
+                        <li>Sauce tomate</li>
+                        <li>Mozzarella</li>
+                        <li>Jambon blanc</li>
+                        <li>Champignons frais</li>
+                        <li>Origan</li>
+                        <li>Huile d'olive</li>
+                    </ul>
+                </div>
+                <div class="prix">14.90€</div>
+                <div class="actions">
+                    <div class="quantite">
+                        <button class="moins">-</button>
+                        <input type="number" value="1" min="1">
+                        <button class="plus">+</button>
+                    </div>
+                    <button onclick="ajouterPizza('regina', 'Pizza Regina', 14.90, 'pizza-regina-123rf.jpg')" class="ajouter-panier">
+                        Ajouter au panier
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

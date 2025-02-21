@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza 4 Fromages - Home Pizza</title>
+    <link rel="stylesheet" href="jnr.css">
+    <script src="panier.js"></script>
+</head>
+<body>
+    <nav>
+        <div class="logo">Home Pizza</div>
+        <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="index.html#menu">Menu</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="panier.html" class="panier">Panier</a></li>
+        </ul>
+    </nav>
+
+    <section class="produit-details">
+        <div class="produit-container">
+            <div class="produit-image">
+                <img src="pizza-4fromge.jpg" alt="Pizza 4 Fromages">
+            </div>
+            <div class="produit-info">
+                <h1>Pizza 4 Fromages</h1>
+                <p class="description">Un festival de fromages italiens sur une base crémeuse. Cette pizza ravira les amateurs de fromages avec ses saveurs riches et complexes.</p>
+                <div class="ingredients">
+                    <h3>Ingrédients :</h3>
+                    <ul>
+                        <li>Crème fraîche</li>
+                        <li>Mozzarella</li>
+                        <li>Gorgonzola</li>
+                        <li>Chèvre</li>
+                        <li>Parmesan</li>
+                        <li>Origan</li>
+                    </ul>
+                </div>
+                <div class="prix">15.90€</div>
+                <div class="actions">
+                    <div class="quantite">
+                        <button class="moins">-</button>
+                        <input type="number" value="1" min="1">
+                        <button class="plus">+</button>
+                    </div>
+                    <button onclick="ajouterPizza('4-fromages', 'Pizza 4 Fromages', 15.90, 'pizza-4fromge.jpg')" class="ajouter-panier">
+                        Ajouter au panier
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

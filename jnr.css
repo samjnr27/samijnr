@@ -1,0 +1,531 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+#contact {
+    padding: 80px 5%;
+    background: #f9f9f9;
+    width: 100%;
+    margin: 0;
+}
+
+.grid-contact {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.carte-contact {
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.carte-contact h3 {
+    color: #333;
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.info-block {
+    margin-bottom: 25px;
+}
+
+.info-block h4 {
+    color: #ff4d4d;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.info-block p {
+    color: #666;
+    line-height: 1.6;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+.contact-form textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+@media (max-width: 768px) {
+    nav {
+        padding: 15px 20px;
+    }
+    
+    nav ul {
+        gap: 15px;
+        font-size: 0.9rem;
+    }
+    
+    .panier {
+        padding: 6px 12px;
+        font-size: 0.9rem;
+    }
+    
+    .hero-content h1 {
+        font-size: 2.5rem;
+        padding: 0 20px;
+    }
+    
+    .grid-contact {
+        grid-template-columns: 1fr;
+        padding: 0 20px;
+    }
+    
+    .carte-contact {
+        padding: 20px;
+        margin: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    nav {
+        padding: 10px;
+    }
+    
+    nav ul {
+        gap: 10px;
+        font-size: 0.8rem;
+    }
+    
+    .logo {
+        font-size: 20px;
+    }
+    
+    .panier {
+        padding: 5px 10px;
+    }
+}
+
+nav {
+    position: fixed;
+    width: 100%;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ff4d4d;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #ff4d4d;
+}
+
+.panier {
+    background: #ff4d4d;
+    color: white !important;
+    padding: 8px 15px;
+    border-radius: 25px;
+}
+
+#hero {
+    height: 70vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                url('images/hero-pizza..png');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.carte-pizza {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    text-decoration: none;
+    display: block;
+    color: inherit;
+}
+
+.carte-pizza:hover {
+    transform: translateY(-10px);
+}
+
+.carte-pizza img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.carte-pizza h3 {
+    padding: 15px;
+    font-size: 1.3rem;
+    color: #333;
+}
+
+.carte-pizza p {
+    padding: 0 15px;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.carte-pizza .prix {
+    display: block;
+    padding: 15px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #ff4d4d;
+}
+
+.carte-pizza .btn-ajouter {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    background: #ff4d4d;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.carte-pizza .btn-ajouter:hover {
+    background: #ff3333;
+}
+
+/* Styles pour les pages de produits individuels */
+.produit-details {
+    padding: 120px 5% 80px;
+    background: #f9f9f9;
+}
+
+.produit-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.produit-image img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.produit-info h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.description {
+    color: #666;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.ingredients {
+    margin-bottom: 30px;
+}
+
+.ingredients h3 {
+    color: #ff4d4d;
+    margin-bottom: 15px;
+}
+
+.ingredients ul {
+    list-style: none;
+}
+
+.ingredients li {
+    color: #666;
+    padding: 5px 0;
+    position: relative;
+    padding-left: 20px;
+}
+
+.ingredients li:before {
+    content: "•";
+    color: #ff4d4d;
+    position: absolute;
+    left: 0;
+}
+
+.actions {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.quantite {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.quantite button {
+    width: 30px;
+    height: 30px;
+    border: none;
+    background: #f0f0f0;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.quantite input {
+    width: 50px;
+    height: 30px;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.ajouter-panier {
+    padding: 12px 30px;
+    background: #ff4d4d;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.ajouter-panier:hover {
+    background: #ff3333;
+}
+
+@media (max-width: 768px) {
+    .produit-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        padding: 20px;
+    }
+
+    .produit-image img {
+        height: 300px;
+    }
+
+    .produit-info h1 {
+        font-size: 2rem;
+    }
+
+    .actions {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .ajouter-panier {
+        width: 100%;
+    }
+
+}
+
+/* Styles pour la page panier */
+.panier-section {
+    padding: 120px 5% 80px;
+    background: #f9f9f9;
+    min-height: 100vh;
+}
+
+.panier-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.panier-container h1 {
+    color: #333;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.panier-item {
+    display: grid;
+    grid-template-columns: 100px 1fr auto auto;
+    gap: 20px;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.panier-item img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.panier-item-info h3 {
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.panier-item-prix {
+    color: #ff4d4d;
+    font-weight: bold;
+}
+
+.panier-item-actions {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.panier-vide {
+    text-align: center;
+    padding: 50px;
+    color: #666;
+    font-size: 1.2rem;
+}
+
+.panier-total {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 2px solid #eee;
+    text-align: right;
+}
+
+.panier-total h3 {
+    color: #333;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.btn-commander {
+    padding: 15px 40px;
+    background: #ff4d4d;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn-commander:hover {
+    background: #ff3333;
+}
+
+@media (max-width: 768px) {
+    .panier-item {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .panier-item img {
+        margin: 0 auto;
+    }
+
+    .panier-item-actions {
+        justify-content: center;
+    }
+}
+
+
+/* Styl page de confirmation */
+.confirmation {
+    padding: 120px 5% 80px;
+    background: #f9f9f9;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.confirmation-container {
+    max-width: 600px;
+    width: 100%;
+    background: white;
+    border-radius: 15px;
+    padding: 40px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.confirmation-container h1 {
+    color: #28a745;
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+}
+
+.confirmation-container p {
+    color: #666;
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.confirmation-container .btn-commander {
+    display: inline-block;
+    padding: 15px 30px;
+    background: #ff4d4d;
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.confirmation-container .btn-commander:hover {
+    background: #ff3333;
+}

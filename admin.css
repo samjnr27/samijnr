@@ -1,0 +1,63 @@
+/* Styles pour l'admin */
+.section-admin {
+    padding: 120px 5% 80px;
+    background: var(--couleur-fond);
+}
+
+.conteneur-connexion {
+    max-width: 500px;
+    margin: 0 auto;
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+}
+
+
+
+
+.formulaire-connexion {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 30%;
+}
+
+.champ-saisie {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.bouton-valider {
+    background: #28a745;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.bouton-supprimer {
+    background: #dc3545;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.commande-item {
+    background: #f8f9fa;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.commande-info {
+    margin-bottom: 15px;
+}
+
+.commande-actions {
+    display: flex;
+    gap: 10px;
+}
