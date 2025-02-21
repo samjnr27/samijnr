@@ -1,4 +1,4 @@
-// Variables globales
+// Variables globale
 let monPanier = JSON.parse(localStorage.getItem('monPanier')) || [];
 
 // Fonction pour ajouter une pizza au panier
@@ -6,7 +6,7 @@ function ajouterPizza(idPizza, nomPizza, prixPizza, imagePizza) {
     // Récupérer la quantité
     const nombrePizza = parseInt(document.querySelector('.quantite input').value);
     
-    // Vérifier si la pizza existe déjà
+    // Verifier si la pizza existe déjà
     const pizzaExistante = monPanier.find(pizza => pizza.id === idPizza);
     
     if (pizzaExistante) {
