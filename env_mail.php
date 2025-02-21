@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Message Envoyé</title>
+  <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f9f9f9;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            flex-direction: column;
+        }
+        .message {
+            color: green;
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-align: center;
+            padding: 20px;
+            border: 2px solid green;
+            border-radius: 10px;
+            background-color: #eaffea;
+            margin-bottom: 20px;
+        }
+        .btn-retour {
+            background-color: #ff4d4d;
+            color: white;
+            padding: 12px 20px;
+            font-size: 1rem;
+            font-weight: bold;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .btn-retour:hover {
+            background-color: #cc0000;
+        }
+    </style>
+</head>
+<body>
+    <div class="message">
+        <?php 
+            echo "Votre message a bien été envoyé, il sera traité au plus vite."; 
+        ?>
+  </div>
+    <a href="index.html" class="btn-retour">Retour à l'accueil</a>
+</body>
+</html>
